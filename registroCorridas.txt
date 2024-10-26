@@ -9,7 +9,6 @@ LocalizaÃ§Ã£o: Forte do Brum
 CondiÃ§Ãµees ClimÃ¡ticas: 23Â°
 
 
-
 Nome do treino: Corrida na Praia
 Data: 25/10/2024
 Distï¿½ncia Percorrida: 5 km
@@ -20,8 +19,8 @@ Condiï¿½ï¿½es Climï¿½ticas: 26ï¿½
 
 Nome do treino: Corrida na Boa Vista
 Data: 26/10/2024
-Distância Percorrida: 8 km
+Distï¿½ncia Percorrida: 8 km
 Tempo: 0 hora(s) 45 minuto(s) e 27 segundo(s)
-Localização: Boa vista
-Condições Climáticas: 25°
+Localizaï¿½ï¿½o: Boa vista
+Condiï¿½ï¿½es Climï¿½ticas: 25ï¿½
 
