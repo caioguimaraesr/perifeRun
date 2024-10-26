@@ -1,0 +1,27 @@
+Gerenciador de Treinos de Corrida
+**********************************
+
+Treino: Corrida Matinal 
+Data: 25/10/2024
+DistÃ¢ncia Percorrida: 5 km
+Tempo: 0 hora(s) 28 minuto(s) e 35 segundo(s)
+LocalizaÃ§Ã£o: Forte do Brum
+CondiÃ§Ãµees ClimÃ¡ticas: 23Â°
+
+
+
+Nome do treino: Corrida na Praia
+Data: 25/10/2024
+Distï¿½ncia Percorrida: 5 km
+Tempo: 0 hora(s) 30 minuto(s) e 25 segundo(s)
+Localizaï¿½ï¿½o: Boa viagem
+Condiï¿½ï¿½es Climï¿½ticas: 26ï¿½
+
+
+Nome do treino: Corrida na Boa Vista
+Data: 26/10/2024
+Distância Percorrida: 8 km
+Tempo: 0 hora(s) 45 minuto(s) e 27 segundo(s)
+Localização: Boa vista
+Condições Climáticas: 25°
+
