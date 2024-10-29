@@ -24,3 +24,11 @@ Tempo: 0 hora(s) 45 minuto(s) e 27 segundo(s)
 Localiza��o: Boa vista
 Condi��es Clim�ticas: 25�
 
+
+Nome do treino: Corrida na Jaqueira
+Data: 20/11/2024
+Distância Percorrida: 9 km
+Tempo: 0 hora(s) 45 minuto(s) e 20 segundo(s)
+Localização: Jaqueira
+Condições Climáticas: Nublado°
+

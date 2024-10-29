@@ -9,15 +9,15 @@ def adicionarTreinos():
     print("Tempo de Treino:")
     tempo = f"{int(input("- Hora(s): "))} hora(s) {int(input("- Minuto(s): "))} minuto(s) e {int(input("- Segundo(s): "))} segundo(s)"
     localizacao = f"{input("Localização: ")}"
-    condClima = f"{int(input("Condições Climáticas: "))}"
+    condClima = f"{(input("Condições Climáticas: "))}"
     
-    with open("registroCorridas.txt", "a") as registroCorridas:
+    with open("registroCorridas.txt", "a", encoding="utf8") as registroCorridas:
         registroCorridas.write(f"\nNome do treino: {nome}\nData: {data}\nDistância Percorrida: {distanciaPercorrida}\nTempo: {tempo}\nLocalização: {localizacao}\nCondições Climáticas: {condClima}°\n\n")
 
 def visualizarTreinos():
     print("Filtrar treinos: \n[1- Distância Percorrida]\n[2- Tempo]")
     o = int(input("Qual modo deseja filtar o seu treino?: "))
-    with open("registroCorridas.txt", "r") as registroCorridas:
+    with open("registroCorridas.txt", "r", encoding="utf8") as registroCorridas:
         linhas = registroCorridas.readlines()
 
     if o == 1:
@@ -51,7 +51,7 @@ def visualizarTreinos():
 
 def atualizarTreinos():
     nome = input("Qual é o nome da lista que deseja modificar? ")
-    with open("registroCorridas.txt" , "r") as registroCorridas:
+    with open("registroCorridas.txt" , "r", encoding="utf8") as registroCorridas:
         linhas = registroCorridas.readlines()
 
     for i in range(len(linhas)):
@@ -82,9 +82,8 @@ def atualizarTreinos():
                 novaCondClim = f"{int(input("Condições Climáticas: "))}"
                 linhas[i+5] = f"Condições Climáticas: {novaCondClim}°"
 
-    with open("registroCorridas.txt", "w") as registroCorridas: 
+    with open("registroCorridas.txt", "w", encoding="utf8") as registroCorridas: 
         registroCorridas.writelines(linhas)
-
 
 def removerTreinos():
     listaRestante = []
@@ -92,17 +91,17 @@ def removerTreinos():
     i = 0 
 
     nome = input("Digite o nome do treino que deseja remover: ")
-    with open("registroCorridas.txt" , "r") as registroCorridas: 
+    with open("registroCorridas.txt" , "r", encoding="utf8") as registroCorridas: 
         linhas = registroCorridas.readlines()
     
     for i in range(len(linhas)):
         if nome in linhas[i]:
             treinoEncontrado = True # apenas para dar o feedback para o usuário 
-            i += 5 #vai ignorar o nome que eu coloquei e as próximas 5 linhas que são todos os registros da corrida
+            i += 5 # vai ignorar o nome que eu coloquei e as próximas 5 linhas que são todos os registros da corrida
         else:
             listaRestante.append(linhas[i]) #aqui vai adicionar a uma lista o restante da lista que nao entrou no paramentro acima 
 
-    with open("registroCorridas.txt", "w") as registroCorridas: # "w" vai substituir todo o conteudo do arquivo txt 
+    with open("registroCorridas.txt", "w", encoding="utf8") as registroCorridas: # "w" vai substituir todo o conteudo do arquivo txt 
         registroCorridas.writelines(listaRestante) # vai reescrever linha por linha (writelines) todos os arquivos que entraram na lista(listaRestante)
 
     if treinoEncontrado: # feedback para o usuário 
@@ -110,17 +109,53 @@ def removerTreinos():
     else: 
         print("Treino não encontrado com esse nome")
 
-# def metasTreinos():
 
-# def sugestTreinos():
+# METAS -------------------------------------------------------- #
+def AmetasTreinos(): 
+    metaTempo = 0 
+    print("Qual meta deseja adicionar?\n[1- Distância percorrida por mês]\n[2- Melhorar o tempo]")
+    opcao = int(input("Escolha uma opção: "))
 
-# def funcExtra():        
+    if opcao == 1:
+        metaKm = int(input("Quantos km deseja fazer por mês: "))
+        with open("metasTreinos.txt" , "a", encoding="utf8") as metasTreino:
+            metasTreino.write(f"\nDistância Percorrida por Mês: {metaKm}\n")
+    elif opcao == 2: 
+        km = int(input("Quantos km deseja correr: "))
+        metaTempo = int(input(f"Qual tempo deseja alcançar em {km} kms "))
+        with open("metasTreinos.txt" , "a", encoding="utf8") as metasTreino:
+            metasTreino.write(f"Alcançar tempo: {metaTempo}\n\n")
+
+def VmetasTreinos():
+    print("Quais metas deseja ver? \n[1- Distâncias percorrida por mês]\n[2- Melhorar tempo]")
+    opcao = int(input("Escolha uma opção: "))
+
+    with open("metasTreinos.txt", "r", encoding="utf8") as metasTreinos:
+        linhas = metasTreinos.readlines()
+
+    if opcao == 1:
+        for linha in linhas:
+            if "por" in linha:
+                print(linha.strip())
+    elif opcao == 2:
+        for linha in linhas:
+            if "tempo" in linha:
+                print(linha.strip())
+
+# ------------------------------------ #       
+
+def sugestTreinos(): # !!!!FALTA ISSO!!!!!!
+    print("ESTA FUNCIONALIDADE AINDA ESTÁ EM DESENVOLVIMENTO!!!")        
+
+def funcExtra(): # !!!!!!FALTA ISSO!!!!!
+    print("ESTA FUNCIONALIDADE AINDA ESTÁ EM DESENVOLVIMENTO!!!")        
+
 
 print("GERENCIAMENTO DE TREINOS DE CORRIDA")
 print("*" * 40)
 while True: 
     print("[1- Adicionar Treinos]\n[2- Visualizar Treinos]\n[3- Atualizar Treinos]\n[4- Excluir Treinos]\n[5- Encerrar]")
-    o = int(input("Oque deseja fazer?: "))
+    o = int(input("O que deseja fazer?: "))
     print("*" * 40)
     
     if o == 5:
@@ -135,3 +170,23 @@ while True:
         atualizarTreinos()
     elif o == 4: 
         removerTreinos()
+    elif o > 5:
+        print("Não compreendido, Digite novamente...") 
+
+while True:
+    looping = input("[Adicionar Meta ou Sugestão de Treino?] ").lower()
+    print("-" * 35)
+    if looping == "não" or looping == "nao" or looping == "n":
+        break 
+    elif looping == "sim" or looping == "s": 
+        print("Oque deseja fazer? \n[1- Adicionar Meta]\n  [1.2- Ver Metas]\n[2- Sugestão de Treino]")
+        opcao = float(input("Oque deseja fazer? "))
+        print("-" * 35)
+        if opcao == 1:
+            AmetasTreinos()
+        if opcao == 1.2:
+            VmetasTreinos()
+        if opcao == 2:
+            sugestTreinos()
+    else:
+        print("Não compreendido, Digite novamente...")
