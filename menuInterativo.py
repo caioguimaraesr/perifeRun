@@ -12,7 +12,7 @@ def adicionarTreinos():
     condClima = f"{(input("Condições Climáticas: "))}"
     
     with open("registroCorridas.txt", "a", encoding="utf8") as registroCorridas:
-        registroCorridas.write(f"\nNome do treino: {nome}\nData: {data}\nDistância Percorrida: {distanciaPercorrida}\nTempo: {tempo}\nLocalização: {localizacao}\nCondições Climáticas: {condClima}°\n\n")
+        registroCorridas.write(f"\nNome do treino: {nome}\nData: {data}\nDistância Percorrida: {distanciaPercorrida}\nTempo: {tempo}\nLocalização: {localizacao}\nCondições Climáticas: {condClima}\n\n")
 
 def visualizarTreinos():
     print("Filtrar treinos: \n[1- Distância Percorrida]\n[2- Tempo]")
