@@ -11,9 +11,6 @@ def adicionarTreinos():
     localizacao = f"{input("Localização: ")}"
     condClima = f"{(input("Condições Climáticas: "))}"
     
-
-
-    
     with open("registroCorridas.txt", "a", encoding="utf8") as registroCorridas:
         registroCorridas.write(f"\nNome do treino: {nome}\nData: {data}\nDistância Percorrida: {distanciaPercorrida}\nTempo: {tempo}\nLocalização: {localizacao}\nCondições Climáticas: {condClima}\n\n")
 
@@ -215,11 +212,11 @@ while True:
         print("-" * 35)
         if opcao == 1:
             AmetasTreinos()
-        if opcao == 1.2:
+        elif opcao == 1.2:
             VmetasTreinos()
-        if opcao == 2:
+        elif opcao == 2:
             sugestTreinos()
-        if opcao == 3:
+        elif opcao == 3:
             avaliacaoCorridas()
     else:
         print("Não compreendido, Digite novamente...")
