@@ -32,3 +32,27 @@ Tempo: 0 hora(s) 45 minuto(s) e 20 segundo(s)
 Localização: Jaqueira
 Condições Climáticas: Nublado°
 
+
+Nome do treino: Corrida em Boa viagem
+Data: 5/11/2024
+Distância Percorrida: 4 km
+Tempo: 2 hora(s) 21 minuto(s) e 33 segundo(s)
+Localização: RECIFE/PE
+Condições Climáticas: nublado
+
+
+Nome do treino: MARATONA REC´N PLAY
+Data: 6/11/2024
+Distância Percorrida: 5 km
+Tempo: 2 hora(s) 34 minuto(s) e 50 segundo(s)
+Localização: Recife antigo
+Condições Climáticas: Ensolarado
+
+
+Nome do treino: Ilha do Retiro
+Data: 4/11/2024
+Distância Percorrida: 3 km
+Tempo: 1 hora(s) 34 minuto(s) e 20 segundo(s)
+Localização: Sport Club do Recife
+Condições Climáticas: Nublado
+

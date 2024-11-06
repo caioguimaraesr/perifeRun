@@ -11,6 +11,9 @@ def adicionarTreinos():
     localizacao = f"{input("Localização: ")}"
     condClima = f"{(input("Condições Climáticas: "))}"
     
+
+
+    
     with open("registroCorridas.txt", "a", encoding="utf8") as registroCorridas:
         registroCorridas.write(f"\nNome do treino: {nome}\nData: {data}\nDistância Percorrida: {distanciaPercorrida}\nTempo: {tempo}\nLocalização: {localizacao}\nCondições Climáticas: {condClima}\n\n")
 
@@ -147,8 +150,36 @@ def VmetasTreinos():
 def sugestTreinos(): # !!!!FALTA ISSO!!!!!!
     print("ESTA FUNCIONALIDADE AINDA ESTÁ EM DESENVOLVIMENTO!!!")        
 
-def funcExtra(): # !!!!!!FALTA ISSO!!!!!
-    print("ESTA FUNCIONALIDADE AINDA ESTÁ EM DESENVOLVIMENTO!!!")        
+def avaliacaoCorridas():
+        nome = input("Insira o nome da corrida que você deseja avaliar: ")
+        coment = input("Insira um comentário para essa corrida: ")
+        feed = int(input("Insira uma nota de 0 a 5 para essa corrida: "))
+        if feed == 0:
+            with open("feedbackCorrida.txt", "a", encoding="utf8") as feedback:
+                feedback.write(f"Sua nota para a corrida {nome} é: {feed}\n")
+                feedback.write(f"Seu comentário para a corrida {nome} é: {coment}")
+        elif feed == 1:
+            with open("feedbackCorrida.txt", "a", encoding="utf8") as feedback:
+                feedback.write(f"Sua nota para a corrida {nome} é: {feed}\n")
+                feedback.write(f"Seu comentário para a corrida {nome} é: {coment}")
+        elif feed == 2:
+            with open("feedbackCorrida.txt", "a", encoding="utf8") as feedback:
+                feedback.write(f"Sua nota para a corrida {nome} é: {feed}\n")
+                feedback.write(f"Seu comentário para a corrida {nome} é: {coment}")
+        elif feed == 3:
+            with open("feedbackCorrida.txt", "a", encoding="utf8") as feedback:
+                feedback.write(f"Sua nota para a corrida {nome} é: {feed}\n")
+                feedback.write(f"Seu comentário para a corrida {nome} é: {coment}")
+        elif feed == 4:
+            with open("feedbackCorrida.txt", "a", encoding="utf8") as feedback:
+                feedback.write(f"Sua nota para a corrida {nome} é: {feed}\n")
+                feedback.write(f"Seu comentário para a corrida {nome} é: {coment}")
+        elif feed == 5:
+            with open("feedbackCorrida.txt", "a", encoding="utf8") as feedback:
+                feedback.write(f"Sua nota para a corrida {nome} é: {feed}\n")
+                feedback.write(f"Seu comentário para a corrida {nome} é: {coment}")
+        else:
+            print("O valor que você inseriu é inválido! Digite corretamente o que foi instruído.\n")
 
 
 print("GERENCIAMENTO DE TREINOS DE CORRIDA")
@@ -179,7 +210,7 @@ while True:
     if looping == "não" or looping == "nao" or looping == "n":
         break 
     elif looping == "sim" or looping == "s": 
-        print("Oque deseja fazer? \n[1- Adicionar Meta]\n  [1.2- Ver Metas]\n[2- Sugestão de Treino]")
+        print("Oque deseja fazer? \n[1- Adicionar Meta]\n  [1.2- Ver Metas]\n[2- Sugestão de Treino]\n[3 - Feedbacks]")
         opcao = float(input("Oque deseja fazer? "))
         print("-" * 35)
         if opcao == 1:
@@ -188,5 +219,7 @@ while True:
             VmetasTreinos()
         if opcao == 2:
             sugestTreinos()
+        if opcao == 3:
+            avaliacaoCorridas()
     else:
         print("Não compreendido, Digite novamente...")
