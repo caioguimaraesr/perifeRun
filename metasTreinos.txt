@@ -1,9 +1,35 @@
 METAS DEFINIDAS
 ****************************
+---------------- Por treino -----------------
+Sua meta é correr 5.0 km em 28.0 MINUTOS
 
-Dist�ncia Percorrida por M�s: 7
-Alcan�ar tempo: 1
+----------- A longo Prazo ------------
+Sua meta é correr 70.0 em 100.0 DIAS
 
-Dist�ncia Percorrida por M�s: 9
-Alcan�ar tempo: 4
+---------------- Por treino -----------------
+Sua meta é correr 9.0 km em 20.0 MINUTOS
+
+---------------- Por treino -----------------
+Sua meta é correr 9.0 km em 12.0 MINUTOS
+
+----------- A longo Prazo ------------
+Sua meta é correr 90.0 em 120.0 DIAS
+
+---------------- Por treino -----------------
+Sua meta é correr 9.0 km em 1.0 MINUTOS
+
+---------------- Por treino -----------------
+Sua meta é correr 2.0 km em 2.0 MINUTOS
+
+----------- A longo Prazo ------------
+Sua meta é correr 1.0 em 1.0 DIAS
+
+---------------- Por treino -----------------
+Sua meta é correr 1.0 km em 1.0 MINUTOS
+
+----------- A longo Prazo ------------
+Sua meta é correr 2.0 em 2.0 DIAS
+
+----------- A longo Prazo ------------
+Sua meta é correr 1.0 em 1.0 DIAS
 

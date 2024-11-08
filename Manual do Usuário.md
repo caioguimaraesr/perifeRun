@@ -49,12 +49,13 @@ No PerifeRun, você pode usufruir das diversas funcionalidades presentes no menu
     <td>Essa funcionalidade permitirá que você peça sugestões de treinos para o nosso sistema e te indicaremos de acordo com o seu histórico e pontos para melhoria</td>
   </tr>
   <tr>
-    <td>Funcionalidade Extra</td>
-    <td>### Funcionalidade em andamento </td>
+    <td>Feedback</td>
+    <td>Na função feedback, o usuário poderá avaliar o treino o treino realizado, anotando um comentário e uma nota de 0 a 5. </td>
   </tr>
 </table> 
 
-## Como faço para utilizar?
+## PRINCIPAIS PERGUNTAS
+### Como faço para utilizar?
 AO SER SOLICITADO O MENU INTERATIVO PELO USUÁRIO, VOCÊ PODERÁ SELECIONAR AS PRINCIPAIS FUNCIONALIDADES...
 ``` py 
 1 - ADICIONAR TREINOS
@@ -63,10 +64,16 @@ AO SER SOLICITADO O MENU INTERATIVO PELO USUÁRIO, VOCÊ PODERÁ SELECIONAR AS P
 4 - REMOVER TREINOS
 5 - ENCERRAR
 ```
-
 APÓS O ENCERRAMENTO, VOCÊ TERÁ ACESSO AS DEMAIS FUNCIONALIDADES...
 ``` py 
 1 - ADICIONAR METAS
     1.2 - VER METAS
 2 -  SUGESTÃO DE TREINOS
-3 - FUNCIONALIDADE EXTRA
+3 - FEEDBACK
+```
+
+### Se eu digitar um valor errado?
+- O sistema reconhecerá o erro e informará para o usuário.
+- Após ser informado, o sistema enviará novamente a pergunta até que deseja respondido como o esperado. 
+
+###

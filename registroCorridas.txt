@@ -1,34 +1,18 @@
 Gerenciador de Treinos de Corrida
 **********************************
 
-Treino: Corrida Matinal 
-Data: 25/10/2024
+Nome do treino: Corrida Na Jaqueira
+Data: 8/11/2024
+Distância Percorrida: 10 km
+Tempo: 0 hora(s) 45 minuto(s) 12 segundo(s)
+Localização: Rua Angelica, 456
+Condições Climáticas: Nublado
+
+
+Nome do treino: Corrida Na Boa Vista
+Data: 8/12/2022
 Distância Percorrida: 5 km
-Tempo: 0 hora(s) 28 minuto(s) e 35 segundo(s)
-Localização: Forte do Brum
-Condiçõees Climáticas: 23°
-
-
-Nome do treino: Corrida na Praia
-Data: 25/10/2024
-Dist�ncia Percorrida: 5 km
-Tempo: 0 hora(s) 30 minuto(s) e 25 segundo(s)
-Localiza��o: Boa viagem
-Condi��es Clim�ticas: 26�
-
-
-Nome do treino: Corrida na Boa Vista
-Data: 26/10/2024
-Dist�ncia Percorrida: 8 km
-Tempo: 0 hora(s) 45 minuto(s) e 27 segundo(s)
-Localiza��o: Boa vista
-Condi��es Clim�ticas: 25�
-
-
-Nome do treino: Corrida na Jaqueira
-Data: 20/11/2024
-Distância Percorrida: 9 km
-Tempo: 0 hora(s) 45 minuto(s) e 20 segundo(s)
-Localização: Jaqueira
-Condições Climáticas: Nublado°
+Tempo: 0 hora(s) 45 minuto(s) 52 segundo(s)
+Localização: Rua Marquês do Pombal, 45
+Condições Climáticas: Ensolarado
 
