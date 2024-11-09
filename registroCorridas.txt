@@ -1,12 +1,6 @@
 Gerenciador de Treinos de Corrida
 **********************************
 
-Nome do treino: Corrida Na Jaqueira
-Data: 8/11/2024
-Distância Percorrida: 10 km
-Tempo: 0 hora(s) 45 minuto(s) 12 segundo(s)
-Localização: Rua Angelica, 456
-Condições Climáticas: Nublado
 
 
 Nome do treino: Corrida Na Boa Vista
@@ -15,4 +9,12 @@ Distância Percorrida: 5 km
 Tempo: 0 hora(s) 45 minuto(s) 52 segundo(s)
 Localização: Rua Marquês do Pombal, 45
 Condições Climáticas: Ensolarado
+
+
+Nome do treino: Corrida Na Jaqueira
+Data: 8/2/2012
+Distância Percorrida: 15 km
+Tempo: 0 hora(s) 53 minuto(s) 12 segundo(s)
+Localização: Recife,pe
+Condições Climáticas: Nublado
 

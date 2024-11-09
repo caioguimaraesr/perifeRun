@@ -144,94 +144,113 @@ def atualizarTreinos():
         print("#" * 50)
 
 def removerTreinos():
-    listaRestante = []
-    treinoEncontrado = False
+    try: 
+        listaRestante = []
+        treinoEncontrado = False
 
-    nome = input("Digite o nome do treino que deseja remover: ").title()
-    with open("registroCorridas.txt", "r", encoding="utf8") as registroCorridas: 
-        linhas = registroCorridas.readlines()
+        nome = input("Digite o nome do treino que deseja remover: ").title()
+        with open("registroCorridas.txt", "r", encoding="utf8") as registroCorridas: 
+            linhas = registroCorridas.readlines()
 
-    i = 0
-    while i < len(linhas):
-        if nome in linhas[i]:
-            treinoEncontrado = True  # apneas para dar o feedback para usuário 
-            i += 6  # vai ignorar as próximas 6 linhas pra pular o bloco do treino todo
-        else:
-            listaRestante.append(linhas[i])  # aqui vai adicionar a uma lista o restante da lista que não entrou no parametro de cima
-            i += 1  # é o incremento para poder acabar o looping
+        i = 0
+        while i < len(linhas):
+            if nome in linhas[i]:
+                treinoEncontrado = True  # apneas para dar o feedback para usuário 
+                i += 6  # vai ignorar as próximas 6 linhas pra pular o bloco do treino todo
+            else:
+                listaRestante.append(linhas[i])  # aqui vai adicionar a uma lista o restante da lista que não entrou no parametro de cima
+                i += 1  # é o incremento para poder acabar o looping
 
-    with open("registroCorridas.txt", "w", encoding="utf8") as registroCorridas:
-        registroCorridas.writelines(listaRestante)
+        with open("registroCorridas.txt", "w", encoding="utf8") as registroCorridas:
+            registroCorridas.writelines(listaRestante)
 
-    if treinoEncontrado:
-        print("Treino removido com sucesso!") 
-    else: 
-        print("Treino não encontrado com esse nome.")
+        if treinoEncontrado:
+            print("Treino removido com sucesso!") 
+        else: 
+            print("Treino não encontrado com esse nome.")
+    except ValueError:
+        print("#" * 50)
+        print("Entrada inválida, Digite novamente...")
+        print("#" * 50)
 
-def AmetasTreinos():  
-    print("        ADICIONAR METAS         ")
-    print("-=" * 15)
-    print("[1- Por treino]\n[2- A longo prazo]")
-    opcao = int(input("Escolha uma opção: "))
-    if opcao == 1:
-        kms = float(input("Quantos kilometros você deseja correr? "))
-        tempo = float(input("Em quantos MINUTOS deseja alcançar essa meta? "))
-        with open("metasTreinos.txt" , "a", encoding="utf8") as metasTreino:
-            metasTreino.write(f"---------------- Por treino -----------------\n")
-            metasTreino.write(f"Sua meta é correr {kms} km em {tempo} MINUTOS\n\n")
-    elif opcao == 2: 
-        kms = float(input("Quantos kilometros você deseja correr? "))
-        tempo = float(input("Em quantos DIAS deseja alcançar essa meta? "))
-        with open("metasTreinos.txt", "a" , encoding="utf8") as metasTreino:
-            metasTreino.write(f"----------- A longo Prazo ------------\n")
-            metasTreino.write(f"Sua meta é correr {kms} em {tempo} DIAS\n\n")
-
-def VmetasTreinos():
-    print("Quais metas deseja ver? \n[1- Por treino]\n[2- A longo prazo]")
-    opcao = int(input("Escolha uma opção: "))
-
-    while True: 
+def AmetasTreinos():
+    try: 
+        print("        ADICIONAR METAS         ")
+        print("-=" * 15)
+        print("[1- Por treino]\n[2- A longo prazo]")
+        opcao = int(input("Escolha uma opção: "))
         if opcao == 1:
-            busca = "Por treino"
-            break
-        elif opcao == 2:
-            busca = "A longo Prazo"
-            break 
-        elif opcao > 2:
-            print("Opção inválida. Escolha 1 ou 2.")  
+            kms = float(input("Quantos kilometros você deseja correr? "))
+            tempo = float(input("Em quantos MINUTOS deseja alcançar essa meta? "))
+            with open("metasTreinos.txt" , "a", encoding="utf8") as metasTreino:
+                metasTreino.write(f"---------------- Por treino -----------------\n")
+                metasTreino.write(f"Sua meta é correr {kms} km em {tempo} MINUTOS\n\n")
+        elif opcao == 2: 
+            kms = float(input("Quantos kilometros você deseja correr? "))
+            tempo = float(input("Em quantos DIAS deseja alcançar essa meta? "))
+            with open("metasTreinos.txt", "a" , encoding="utf8") as metasTreino:
+                metasTreino.write(f"----------- A longo Prazo ------------\n")
+                metasTreino.write(f"Sua meta é correr {kms} em {tempo} DIAS\n\n")
+    except ValueError:
+        print("#" * 50)
+        print("Entrada inválida, Digite novamente...")
+        print("#" * 50)
+        
+def VmetasTreinos():
+    try:
+        while True: 
+            print("Quais metas deseja ver? \n[1- Por treino]\n[2- A longo prazo]")
+            opcao = int(input("Escolha uma opção: "))
+            if opcao == 1:
+                busca = "Por treino"
+                break
+            elif opcao == 2:
+                busca = "A longo Prazo"
+                break 
+            else:
+                print("Opção inválida. Escolha 1 ou 2.")  
 
-    with open("metasTreinos.txt", "r", encoding="utf8") as metasTreinos:
-        metas = metasTreinos.readlines()
+        with open("metasTreinos.txt", "r", encoding="utf8") as metasTreinos:
+            metas = metasTreinos.readlines()
 
-        print(f"\n=== Metas Selecionadas ({busca}) ===")
-        for i, linha in enumerate(metas):
-            if busca in linha:
-                print(metas[i+1].strip())
-                print()
-
+            print(f"\n=== Metas Selecionadas ({busca}) ===")
+            for i, linha in enumerate(metas):
+                if busca in linha:
+                    print(metas[i+1].strip())
+                    print()
+    except ValueError:
+        print("#" * 50)
+        print("Entrada inválida, Digite novamente...")
+        print("#" * 50)
+        
 def sugestTreinos(): 
-    print("[1- Longão]\n[2- Fartlek]\n[3- HIIT]\n[4- Tempo Run]\n[5 - Corrida Regenerativa]")
-    o = int(input("Escolha uma opção: "))
-    if o == 1:
-        print("---- Treino Longão ---") 
-        print("Corrida longa de 10 km - Ritmo Confortável\nA cada semana, aumente a distância em 1 km até alcançar 18-20 km \nOBS: É importante manter o ritmo constante, sem se preocupar com velocidade.")
-        print("----------------------") 
-    elif o == 2:
-        print("---- Fartlek ---") 
-        print("Em uma distância de 5km escolha pontos de referência.\nA cada ponto, acelere por 20-30 segundos e depois retorne a um ritmo confortável até o próximo ponto.\nVarie a intensidade e a duração dos sprints conforme sentir necessidade.")
-        print("----------------------") 
-    elif o == 3: 
-        print("---- Tempo Intervalado (HIIT) ---") 
-        print("Faça um treino de 8 x 400 metros\nCorra 400 metros em alta intensidade, depois trote ou caminhe por 200 metros para recuperação. \nRepita isso 8 vezes\nEsse treino é excelente para melhorar a velocidade")
-        print("----------------------") 
-    elif o == 4:
-        print("---- Treino de Ritmo (Tempo Run) ---") 
-        print("Comece com 10 minutos de aquecimento em um ritmo leve\nCorra por 20 minutos em um ritmo que use o máximo da sua capacidade\nFinalize com 10 minutos de desaquecimento.\nOBS: Esse treino simula a intensidade de uma corrida e é ótimo para melhorar a resistência a ritmos mais rápidos")
-        print("----------------------") 
-    elif o == 5: 
-        print("---- Corrida Regenerativa ---") 
-        print("Faça uma corrida leve de 20 a 30 minutos em um ritmo muito confortável onde você consiga manter uma conversa sem se sentir ofegante\nO objetivo é permitir que os músculos se recuperem após um treino intenso, sem sobrecarregar o corpo.")
-        print("----------------------") 
+    try: 
+        print("[1- Longão]\n[2- Fartlek]\n[3- HIIT]\n[4- Tempo Run]\n[5 - Corrida Regenerativa]")
+        o = int(input("Escolha uma opção: "))
+        if o == 1:
+            print("---- Treino Longão ---") 
+            print("Corrida longa de 10 km - Ritmo Confortável\nA cada semana, aumente a distância em 1 km até alcançar 18-20 km \nOBS: É importante manter o ritmo constante, sem se preocupar com velocidade.")
+            print("----------------------") 
+        elif o == 2:
+            print("---- Fartlek ---") 
+            print("Em uma distância de 5km escolha pontos de referência.\nA cada ponto, acelere por 20-30 segundos e depois retorne a um ritmo confortável até o próximo ponto.\nVarie a intensidade e a duração dos sprints conforme sentir necessidade.")
+            print("----------------------") 
+        elif o == 3: 
+            print("---- Tempo Intervalado (HIIT) ---") 
+            print("Faça um treino de 8 x 400 metros\nCorra 400 metros em alta intensidade, depois trote ou caminhe por 200 metros para recuperação. \nRepita isso 8 vezes\nEsse treino é excelente para melhorar a velocidade")
+            print("----------------------") 
+        elif o == 4:
+            print("---- Treino de Ritmo (Tempo Run) ---") 
+            print("Comece com 10 minutos de aquecimento em um ritmo leve\nCorra por 20 minutos em um ritmo que use o máximo da sua capacidade\nFinalize com 10 minutos de desaquecimento.\nOBS: Esse treino simula a intensidade de uma corrida e é ótimo para melhorar a resistência a ritmos mais rápidos")
+            print("----------------------") 
+        elif o == 5: 
+            print("---- Corrida Regenerativa ---") 
+            print("Faça uma corrida leve de 20 a 30 minutos em um ritmo muito confortável onde você consiga manter uma conversa sem se sentir ofegante\nO objetivo é permitir que os músculos se recuperem após um treino intenso, sem sobrecarregar o corpo.")
+            print("----------------------") 
+    except ValueError:
+        print("#" * 50)
+        print("Entrada inválida, Digite novamente...")
+        print("#" * 50)
 
 def avaliacaoCorridas():
     try:
@@ -305,35 +324,40 @@ while True:
         print("#" * 40)
 
 while True: 
-    looping = input(f"{nome}, deseja acessar as funcionalidades extras? ").lower()
-    print("-" * 50)
-    if looping == "não" or looping == "nao" or looping == "n":
-        print(f"Encerrando interação...")
-        print(f"Até mais, {nome}!!")
-        break 
-    elif looping == "sim" or looping == "s":
-        while True:
-            try:
-                print("             METAS, SUGESTÕES E FEEDBACKS           ")
-                print("-=" * 25)
-                print("Oque deseja fazer? \n[1- Adicionar Meta]\n  [1.2- Ver Metas]\n[2- Sugestão de Treino]\n[3- Feedbacks]\n[4- Encerrar]")
-                opcao = float(input("Oque deseja fazer? "))
-                print("-" * 35)
-                if opcao == 1:
-                    AmetasTreinos()
-                elif opcao == 1.2:
-                    VmetasTreinos()
-                elif opcao == 2:
-                    sugestTreinos()
-                elif opcao == 3:
-                    avaliacaoCorridas()
-                elif opcao == 4:
-                    print("Encerrando interação...")
-                    print(f"Até mais, {nome}!!")
-                    break 
-                else:
-                    print("Opção inválida, Digite novamente...")                
-            except ValueError:
-                print("#" * 40)
-                print("Entrada inválida, Digite novamente...")
-                print("#" * 40)
+    try: 
+        looping = input(f"{nome}, deseja acessar as funcionalidades extras? ").lower()
+        print("-" * 50)
+        if looping == "não" or looping == "nao" or looping == "n":
+            print(f"Encerrando interação...")
+            print(f"Até mais, {nome}!!")
+            break 
+        elif looping == "sim" or looping == "s":
+            while True:
+                try:
+                    print("             METAS, SUGESTÕES E FEEDBACKS           ")
+                    print("-=" * 25)
+                    print("Oque deseja fazer? \n[1- Adicionar Meta]\n  [1.2- Ver Metas]\n[2- Sugestão de Treino]\n[3- Feedbacks]\n[4- Encerrar]")
+                    opcao = float(input("Oque deseja fazer? "))
+                    print("-" * 35)
+                    if opcao == 1:
+                        AmetasTreinos()
+                    elif opcao == 1.2:
+                        VmetasTreinos()
+                    elif opcao == 2:
+                        sugestTreinos()
+                    elif opcao == 3:
+                        avaliacaoCorridas()
+                    elif opcao == 4:
+                        print("Encerrando interação...")
+                        print(f"Até mais, {nome}!!")
+                        break 
+                    else:
+                        print("Opção inválida, Digite novamente...")                
+                except ValueError:
+                    print("#" * 40)
+                    print("Entrada inválida, Digite novamente...")
+                    print("#" * 40)
+    except ValueError:
+        print("#" * 50)
+        print("Entrada inválida, Digite novamente...")
+        print("#" * 50)
