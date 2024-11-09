@@ -56,48 +56,58 @@ def adicionarTreinos():
 
 def visualizarTreinos():
     try: 
-        print("Filtrar treinos: \n[1- Distância Percorrida]\n[2- Tempo]")
-        o = int(input("Qual modo deseja filtar o seu treino?: "))
-        with open("registroCorridas.txt", "r", encoding="utf8") as registroCorridas:
-            linhas = registroCorridas.readlines()
+        while True: 
+            print("Filtrar treinos: \n[1- Distância Percorrida]\n[2- Tempo]")
+            o = int(input("Qual modo deseja filtar o seu treino?: "))
+            with open("arquivos\\registroCorridas.txt", "r", encoding="utf8") as registroCorridas:
+                linhas = registroCorridas.readlines()
 
-        if o == 1:
-            distanciaPercorrida = f"{int(input('Distância Percorrida (Km): '))} km"
+            treinoEncontrado = False
+            if o == 1:
+                distanciaPercorrida = f"{int(input('Distância Percorrida (Km): '))} km"
+                print()
+                for i, linha in enumerate(linhas):
+                    if distanciaPercorrida in linha:
+                        treinoEncontrado = True
+                        print("-" * 20)
+                        print(linhas[i-2].strip()) # nome do treino 
+                        print(linhas[i-1].strip())  # data
+                        print(linha.strip()) # distância percorrida
+                        print(linhas[i+1].strip()) # tempo
+                        print(linhas[i+2].strip()) # localização 
+                        print(linhas[i+3].strip()) # condições climáticas
+                        print("-" * 20)
+                        break
+                
+                if not treinoEncontrado:
+                    print("Treino não encontrado!")
+
+            elif o == 2:
+                print("Tempo de Treino:")
+                hora = int(input("- Hora(s): "))
+                minutos = int(input("- Minuto(s): "))
+                segundos = int(input("- Segundo(s): "))
+                tempo = f"{hora} hora(s) {minutos} minuto(s) {segundos} segundo(s)"
+                print()
+                for i, linha in enumerate(linhas):
+                    if tempo in linha:
+                        treinoEncontrado = True
+                        print(linhas[i-3].strip()) # nome do treino
+                        print(linhas[i-2].strip())  # data
+                        print(linhas[i-1].strip()) # distância percorrida
+                        print(linha.strip()) # tempo
+                        print(linhas[i+1].strip()) # localização 
+                        print(linhas[i+2].strip()) # condições climáticas
+                        print("-" * 20)
+                        break
+                
+                if not treinoEncontrado: 
+                    print("Treino não encontrado!")
+                print()
+            else:
+                print("Valor inválido, Digite novamente...")
             print()
-            for i, linha in enumerate(linhas):
-                if distanciaPercorrida in linha:
-                    print("-" * 20)
-                    print(linhas[i-2].strip()) # nome do treino 
-                    print(linhas[i-1].strip())  # data
-                    print(linha.strip()) # distância percorrida
-                    print(linhas[i+1].strip()) # tempo
-                    print(linhas[i+2].strip()) # localização 
-                    print(linhas[i+3].strip()) # condições climáticas
-                    print("-" * 20)
-        elif o == 2:
-            print("Tempo de Treino:")
-            hora = int(input("- Hora(s): "))
-            minutos = int(input("- Minuto(s): "))
-            segundos = int(input("- Segundo(s): "))
-            tempo = f"{hora} hora(s) {minutos} minuto(s) {segundos} segundo(s)"
-            print()
-            for i, linha in enumerate(linhas):
-                if tempo in linha:
-                    print(linhas[i-3].strip()) # nome do treino
-                    print(linhas[i-2].strip())  # data
-                    print(linhas[i-1].strip()) # distância percorrida
-                    print(linha.strip()) # tempo
-                    print(linhas[i+1].strip()) # localização 
-                    print(linhas[i+2].strip()) # condições climáticas
-                    print("-" * 20)
-        elif o > 2 and o < 0: 
-            print("Valor inválido, Digite novamente...")
-        print()
     except ValueError:
-        print("#" * 50)
-        print("Entrada inválida, Digite novamente...")
-        print("#" * 50)
-    except TypeError:
         print("#" * 50)
         print("Entrada inválida, Digite novamente...")
         print("#" * 50)
