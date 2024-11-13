@@ -59,7 +59,7 @@ def adicionarTreinos():
 def visualizarTreinos():
     try: 
         while True: 
-            print("Filtrar treinos: \n[1- Distância Percorrida]\n[2- Tempo]")
+            print("Filtrar treinos: \n[1- Distância Percorrida]\n[2- Tempo]\n[3- Voltar]")
             o = int(input("Qual modo deseja filtar o seu treino?: "))
             with open("registroCorridas.txt", "r", encoding="utf8") as registroCorridas:
                 linhas = registroCorridas.readlines()
@@ -102,10 +102,14 @@ def visualizarTreinos():
                         print(linhas[i+2].strip()) # condições climáticas
                         print("-" * 20)
                         break
-                
+  
                 if not treinoEncontrado: 
                     print("Treino não encontrado!")
                 print()
+
+            elif o == 3:
+                print("Voltando para o menu principal...")
+                break
             else:
                 print("Valor inválido, Digite novamente...")
             print()
@@ -211,7 +215,7 @@ def AmetasTreinos():
 def VmetasTreinos():
     try:
         while True: 
-            print("Quais metas deseja ver? \n[1- Por treino]\n[2- A longo prazo]")
+            print("Quais metas deseja ver? \n[1- Por treino]\n[2- A longo prazo]\n[3- Voltar]")
             opcao = int(input("Escolha uma opção: "))
             if opcao == 1:
                 busca = "Por treino"
@@ -240,7 +244,7 @@ def sugestTreinos():
         with open("treinosAleatorios.txt", "r", encoding="utf8") as arquivo:
             treinos = arquivo.readlines()
 
-            numeroAleatorios = random.randint(0, 19)
+            numeroAleatorios = random.randint(0, 39)
 
             print("\n                 =-=-=-= SUGESTÃO DE TREINO =-=-=-=")
             print(treinos[numeroAleatorios] + "\n")
@@ -296,7 +300,8 @@ while True:
         print("#" * 50)
         print("Tipo inválido, Digite novamente...")
         print("#" * 50)
-print(f"\n\033[1;35m----------------- Bem vindo ao PERIFERUN, \033[1;32m{nome}\033[m \033[1;35m-----------------\033[m")
+print(f"\n\033[1;35m-=-=-=-=-=-=-=-=-= Bem vindo ao PERIFERUN, \033[1;32m{nome}\033[m \033[1;35m-=-=-=-=-=-=-=-=-=\033[m")
+
 while True:
     try: 
         print("\033[1;32m[1] Adicionar Treinos\033[m \n\033[1;33m[2] Visualizar Treinos\033[m \n\033[1;33m[3] Atualizar Treinos\033[m \n\033[1;31m[4] Excluir Treino \n\033[1;31m[5] Encerrar\033[m")
@@ -333,7 +338,7 @@ while True:
                 try:
                     print("             METAS, SUGESTÕES E FEEDBACKS           ")
                     print("-=" * 25)
-                    print("Oque deseja fazer? \n\033[1;32m[1] Adicionar Meta\033[m \n\033[1;33m[2] Ver Metas\033[m \n\033[1;34m[3] Sugestão de Treino\033[m \033\n[1;35m[3] Feedbacks\033[m \n\033[1;31m[4] Encerrar\033[m")
+                    print("Oque deseja fazer? \n\033[1;32m[1] Adicionar Meta\033[m \n\033[1;33m[2] Ver Metas\033[m \n\033[1;34m[3] Sugestão de Treino\033[m \033\n[1;35m[4] Feedbacks\033[m \n\033[1;31m[5] Encerrar\033[m")
                     opcao = int(input("Oque deseja fazer? "))
                     print("-" * 35)
                     if opcao == 1:
@@ -349,11 +354,12 @@ while True:
                         print(f"Até mais, {nome}!!")
                         break 
                     else:
-                        print("Opção inválida, Digite novamente...")                
+                        print("Opção inválida, Digite novamente...")
                 except ValueError:
                     print("#" * 40)
                     print("Entrada inválida, Digite novamente...")
                     print("#" * 40)
+            break                 
     except ValueError:
         print("#" * 50)
         print("Entrada inválida, Digite novamente...")
