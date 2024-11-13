@@ -296,13 +296,12 @@ while True:
         print("#" * 50)
         print("Tipo inválido, Digite novamente...")
         print("#" * 50)
-print(f"----------------- Bem vindo ao PERIFERUN, {nome} -----------------")
+print(f"\n\033[1;35m----------------- Bem vindo ao PERIFERUN, \033[1;32m{nome}\033[m \033[1;35m-----------------\033[m")
 while True:
     try: 
-        print("[1- Adicionar Treinos]\n[2- Visualizar Treinos]\n[3- Atualizar Treinos]\n[4- Excluir Treinos]\n[5- Encerrar]")
+        print("\033[1;32m[1] Adicionar Treinos\033[m \n\033[1;33m[2] Visualizar Treinos\033[m \n\033[1;33m[3] Atualizar Treinos\033[m \n\033[1;31m[4] Excluir Treino \n\033[1;31m[5] Encerrar\033[m")
         o = int(input("O que deseja fazer?: "))
         print("*" * 50)
-        
         if o == 5:
             break 
 
@@ -334,18 +333,18 @@ while True:
                 try:
                     print("             METAS, SUGESTÕES E FEEDBACKS           ")
                     print("-=" * 25)
-                    print("Oque deseja fazer? \n[1- Adicionar Meta]\n  [1.2- Ver Metas]\n[2- Sugestão de Treino]\n[3- Feedbacks]\n[4- Encerrar]")
-                    opcao = float(input("Oque deseja fazer? "))
+                    print("Oque deseja fazer? \n\033[1;32m[1] Adicionar Meta\033[m \n\033[1;33m[2] Ver Metas\033[m \n\033[1;34m[3] Sugestão de Treino\033[m \033\n[1;35m[3] Feedbacks\033[m \n\033[1;31m[4] Encerrar\033[m")
+                    opcao = int(input("Oque deseja fazer? "))
                     print("-" * 35)
                     if opcao == 1:
                         AmetasTreinos()
-                    elif opcao == 1.2:
-                        VmetasTreinos()
                     elif opcao == 2:
-                        sugestTreinos()
+                        VmetasTreinos()
                     elif opcao == 3:
-                        avaliacaoCorridas()
+                        sugestTreinos()
                     elif opcao == 4:
+                        avaliacaoCorridas()
+                    elif opcao == 5:
                         print("Encerrando interação...")
                         print(f"Até mais, {nome}!!")
                         break 
