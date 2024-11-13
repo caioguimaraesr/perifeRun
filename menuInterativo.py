@@ -1,6 +1,8 @@
 import os 
 os.system("cls")
 
+import random
+
 def adicionarTreinos():
     try:
         while True: 
@@ -59,7 +61,7 @@ def visualizarTreinos():
         while True: 
             print("Filtrar treinos: \n[1- Distância Percorrida]\n[2- Tempo]")
             o = int(input("Qual modo deseja filtar o seu treino?: "))
-            with open("arquivos\\registroCorridas.txt", "r", encoding="utf8") as registroCorridas:
+            with open("registroCorridas.txt", "r", encoding="utf8") as registroCorridas:
                 linhas = registroCorridas.readlines()
 
             treinoEncontrado = False
@@ -235,28 +237,14 @@ def VmetasTreinos():
         
 def sugestTreinos(): 
     try: 
-        print("[1- Longão]\n[2- Fartlek]\n[3- HIIT]\n[4- Tempo Run]\n[5 - Corrida Regenerativa]")
-        o = int(input("Escolha uma opção: "))
-        if o == 1:
-            print("---- Treino Longão ---") 
-            print("Corrida longa de 10 km - Ritmo Confortável\nA cada semana, aumente a distância em 1 km até alcançar 18-20 km \nOBS: É importante manter o ritmo constante, sem se preocupar com velocidade.")
-            print("----------------------") 
-        elif o == 2:
-            print("---- Fartlek ---") 
-            print("Em uma distância de 5km escolha pontos de referência.\nA cada ponto, acelere por 20-30 segundos e depois retorne a um ritmo confortável até o próximo ponto.\nVarie a intensidade e a duração dos sprints conforme sentir necessidade.")
-            print("----------------------") 
-        elif o == 3: 
-            print("---- Tempo Intervalado (HIIT) ---") 
-            print("Faça um treino de 8 x 400 metros\nCorra 400 metros em alta intensidade, depois trote ou caminhe por 200 metros para recuperação. \nRepita isso 8 vezes\nEsse treino é excelente para melhorar a velocidade")
-            print("----------------------") 
-        elif o == 4:
-            print("---- Treino de Ritmo (Tempo Run) ---") 
-            print("Comece com 10 minutos de aquecimento em um ritmo leve\nCorra por 20 minutos em um ritmo que use o máximo da sua capacidade\nFinalize com 10 minutos de desaquecimento.\nOBS: Esse treino simula a intensidade de uma corrida e é ótimo para melhorar a resistência a ritmos mais rápidos")
-            print("----------------------") 
-        elif o == 5: 
-            print("---- Corrida Regenerativa ---") 
-            print("Faça uma corrida leve de 20 a 30 minutos em um ritmo muito confortável onde você consiga manter uma conversa sem se sentir ofegante\nO objetivo é permitir que os músculos se recuperem após um treino intenso, sem sobrecarregar o corpo.")
-            print("----------------------") 
+        with open("treinosAleatorios.txt", "r", encoding="utf8") as arquivo:
+            treinos = arquivo.readlines()
+
+            numeroAleatorios = random.randint(0, 19)
+
+            print("\n                 =-=-=-= SUGESTÃO DE TREINO =-=-=-=")
+            print(treinos[numeroAleatorios] + "\n")
+
     except ValueError:
         print("#" * 50)
         print("Entrada inválida, Digite novamente...")
