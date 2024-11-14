@@ -11,26 +11,36 @@ Localização: Rua Marquês do Pombal, 45
 Condições Climáticas: Ensolarado
 
 
-Nome do treino: Corrida Na Jaqueira
+Nome do treino: corrida no bosque
 Data: 8/2/2012
-Distância Percorrida: 15 km
+Distância Percorrida: 10 km
 Tempo: 0 hora(s) 53 minuto(s) 12 segundo(s)
 Localização: Recife,pe
 Condições Climáticas: Nublado
 
 
-Nome do treino: Corrida No Buraco Da Veia
-Data: 30/11/2022
-Distância Percorrida: 19 km
-Tempo: 1 hora(s) 45 minuto(s) 21 segundo(s)
-Localização: Recife, pe
+
+
+Nome do treino: Corrida Na Via Mangue
+Data: 13/11/2024
+Distância Percorrida: 10 km
+Tempo: 0 hora(s) 45 minuto(s) 12 segundo(s)
+Localização: Recife
+Condições Climáticas: Ensolarado
+
+
+Nome do treino: Corrida No Coque
+Data: 4/4/2023
+Distância Percorrida: 10 km
+Tempo: 0 hora(s) 56 minuto(s) 45 segundo(s)
+Localização: Recife
 Condições Climáticas: Nublado
 
 
-Nome do treino: Corrida Na Praia
-Data: 22/12/2022
+Nome do treino: Corrida No Jardim
+Data: 4/4/2023
 Distância Percorrida: 10 km
-Tempo: 0 hora(s) 45 minuto(s) 12 segundo(s)
-Localização: Boa viagem, recife
-Condições Climáticas: Ensolarado
+Tempo: 0 hora(s) 36 minuto(s) 24 segundo(s)
+Localização: Recife
+Condições Climáticas: Nublado
 

@@ -48,13 +48,9 @@ def adicionarTreinos():
             registroCorridas.write(f"\nNome do treino: {nome}\nData: {dia}/{mes}/{ano}\nDistância Percorrida: {distanciaPercorrida}\nTempo: {hora} hora(s) {minutos} minuto(s) {segundos} segundo(s)\nLocalização: {localizacao}\nCondições Climáticas: {condClima}\n\n")
 
     except ValueError:
-        print("#" * 30)
-        print("Entrada inválida, Digite novamente!")
-        print("#" * 30)
-    except TypeError:
-        print("#" * 30)
-        print("Tipo inválido, Digite novamente!")
-        print("#" * 30)
+        print("\033[1;31m#\033[m" * 50)
+        print("\033[1;31mEntrada inválida, Digite novamente...\033[m")
+        print("\033[1;31m#\033[m" * 50)
 
 def visualizarTreinos():
     try: 
@@ -79,7 +75,6 @@ def visualizarTreinos():
                         print(linhas[i+2].strip()) # localização 
                         print(linhas[i+3].strip()) # condições climáticas
                         print("-" * 20)
-                        break
                 
                 if not treinoEncontrado:
                     print("Treino não encontrado!")
@@ -102,8 +97,7 @@ def visualizarTreinos():
                         print(linhas[i+1].strip()) # localização 
                         print(linhas[i+2].strip()) # condições climáticas
                         print("-" * 20)
-                        break
-  
+
                 if not treinoEncontrado: 
                     print("Treino não encontrado!")
                 print()
@@ -112,25 +106,27 @@ def visualizarTreinos():
                 print("Voltando para o menu principal...")
                 break
             else:
-                print("Valor inválido, Digite novamente...")
+                print("\033[1;31mValor inválido, Digite novamente...[m")
             print()
     except ValueError:
-        print("#" * 50)
-        print("Entrada inválida, Digite novamente...")
-        print("#" * 50)
+        print("\033[1;31m#\033[m" * 50)
+        print("\033[1;31mEntrada inválida, Digite novamente...\033[m")
+        print("\033[1;31m#\033[m" * 50)
 
 def atualizarTreinos(): 
     try: 
-        nome = input("Qual é o nome da lista que deseja modificar? ").title()
+        treinoEncontrado = False
+        nome = input("Qual é o nome do treino que deseja modificar? ").title()
         with open("registroCorridas.txt" , "r", encoding="utf8") as registroCorridas:
             linhas = registroCorridas.readlines()
 
         for i in range(len(linhas)):
             if nome in linhas[i]:
+                treinoEncontrado = True
                 print("[1- Nome do treino]\n[2- Data do Treino]\n[3- Distância Percorrida]\n[4- Tempo do treino]\n[5- Localização]\n[6- Condições climáticas]")
                 o = int(input("Oque deseja modificar? "))
                 if o == 1:
-                    novoNome = input("Digite o novo nome: ")
+                    novoNome = input("Digite o novo nome: ").title()
                     linhas[i] = f"Nome do treino: {novoNome}\n"
                 elif o == 2:
                     print("Nova data: ")
@@ -146,19 +142,24 @@ def atualizarTreinos():
                     linhas[i+3] = f"Tempo: {novoTempo}\n"
                 elif o == 5: 
                     print("Nova Localização: ")
-                    novaLoc = f"{input("Localização: ")}"
+                    novaLoc = f"{input("Localização: ").title()}"
                     linhas[i+4] = f"Localização: {novaLoc}\n"
                 elif o == 6:
                     print("Nova Condição Climática: ")
                     novaCondClim = f"{input("Condições Climáticas: ")}"
                     linhas[i+5] = f"Condições Climáticas: {novaCondClim}\n\n"
 
+        if not treinoEncontrado:
+            print("\033[1;31mTreino não encontrado\033[m")
+            print()
+
         with open("registroCorridas.txt", "w", encoding="utf8") as registroCorridas: 
             registroCorridas.writelines(linhas)
+
     except ValueError:
-        print("#" * 50)
-        print("Entrada inválida, Digite novamente...")
-        print("#" * 50)
+        print("\033[1;31m#\033[m" * 50)
+        print("\033[1;31mEntrada inválida, Digite novamente...\033[m")
+        print("\033[1;31m#\033[m" * 50)
 
 def removerTreinos():
     try: 
@@ -182,13 +183,15 @@ def removerTreinos():
             registroCorridas.writelines(listaRestante)
 
         if treinoEncontrado:
-            print("Treino removido com sucesso!") 
+            print("\033[1;32mTreino removido com sucesso!\033[m")
+            print()
         else: 
-            print("Treino não encontrado com esse nome.")
+            print("\033[1;31mTreino não encontrado com esse nome.\033[m")
+            print()
     except ValueError:
-        print("#" * 50)
-        print("Entrada inválida, Digite novamente...")
-        print("#" * 50)
+        print("\033[1;31m#\033[m" * 50)
+        print("\033[1;31mEntrada inválida, Digite novamente...\033[m")
+        print("\033[1;31m#\033[m" * 50)
 
 def AmetasTreinos():
     try: 
@@ -209,9 +212,9 @@ def AmetasTreinos():
                 metasTreino.write(f"----------- A longo Prazo ------------\n")
                 metasTreino.write(f"Sua meta é correr {kms} em {tempo} DIAS\n\n")
     except ValueError:
-        print("#" * 50)
-        print("Entrada inválida, Digite novamente...")
-        print("#" * 50)
+        print("\033[1;31m#\033[m" * 50)
+        print("\033[1;31mEntrada inválida, Digite novamente...\033[m")
+        print("\033[1;31m#\033[m" * 50)
         
 def VmetasTreinos():
     try:
@@ -236,9 +239,9 @@ def VmetasTreinos():
                     print(metas[i+1].strip())
                     print()
     except ValueError:
-        print("#" * 50)
-        print("Entrada inválida, Digite novamente...")
-        print("#" * 50)
+        print("\033[1;31m#\033[m" * 50)
+        print("\033[1;31mEntrada inválida, Digite novamente...\033[m")
+        print("\033[1;31m#\033[m" * 50)
         
 def sugestTreinos(): 
     try: 
@@ -251,9 +254,9 @@ def sugestTreinos():
             print(treinos[numeroAleatorios] + "\n")
 
     except ValueError:
-        print("#" * 50)
-        print("Entrada inválida, Digite novamente...")
-        print("#" * 50)
+        print("\033[1;31m#\033[m" * 50)
+        print("\033[1;31mEntrada inválida, Digite novamente...\033[m")
+        print("\033[1;31m#\033[m" * 50)
 
 def avaliacaoCorridas():
     try:
@@ -269,11 +272,11 @@ def avaliacaoCorridas():
             if avaliacaoTreino: 
                 break 
             else: 
-                print("Treino não encontrado, Digite novamente!!!")
+                print("\033[1;31mTreino não encontrado, Digite novamente!!!\033[m")
         
         coment = input("Insira um comentário para essa corrida: ")
         while True:
-            feed = int(input("Insira uma nota de 0 a 5 para essa corrida: "))        
+            feed = int(input("Insira uma nota de \033[1;31m0\033[m a \033[1;32m5\033[m para essa corrida: "))        
             if 0 < feed > 5:
                 print("Avaliação Inválida, Digite novamente!!")
             else:
@@ -284,23 +287,23 @@ def avaliacaoCorridas():
             feedback.write(f"Comentário: {coment}\n{"-" * 45}\n")
 
     except ValueError:
-        print("#" * 40)
-        print("Entrada inválida, Digite novamente...")
-        print("#" * 40)
+        print("\033[1;31m#\033[m" * 50)
+        print("\033[1;31mEntrada inválida, Digite novamente...\033[m")
+        print("\033[1;31m#\033[m" * 50)
 
-print("           GERENCIAMENTO DOS TREINOS DE CORRIDA          ")
-print("-=" * 30)
+print("\033[1;33m          GERENCIAMENTO DOS TREINOS DE CORRIDA          \033[m")
+print("\033[1;33m-=\033[m" * 30)
 while True:
     try: 
-        nome = input("Digite o seu nome: ").strip().title() #strip - retira os espaços vazios da frente e de tras   
+        nome = input("\nDigite o seu nome: ").strip().title() #strip - retira os espaços vazios da frente e de tras   
         if nome.replace(" ", "").isalpha(): # eu vou retirar os espaços vazios para conferir se tem apenas letras no input
             break # caso tenha apenas letras no input, iremos quebrar o looping 
         else:
-            print("Nome inválido, Digite novamente...") # caso não consiga seguir as condições acima, printará esse comando e entrará no looping novamente
-    except TypeError:
-        print("#" * 50)
-        print("Tipo inválido, Digite novamente...")
-        print("#" * 50)
+            print("\033[1;31mNome inválido, Digite novamente...\033[m") # caso não consiga seguir as condições acima, printará esse comando e entrará no looping novamente
+    except ValueError:
+        print("\033[1;31m#\033[m" * 50)
+        print("\033[1;31mEntrada inválida, Digite novamente...\033[m")
+        print("\033[1;31m#\033[m" * 50)
 print(f"\n\033[1;35m-=-=-=-=-=-=-=-=-= Bem vindo ao PERIFERUN, \033[1;32m{nome}\033[m \033[1;35m-=-=-=-=-=-=-=-=-=\033[m")
 
 while True:
@@ -322,9 +325,9 @@ while True:
         elif o > 5:
             print("Opção inválida, Digite novamente...")
     except ValueError:
-        print("#" * 40)
-        print("Entrada inválida, Digite novamente...")
-        print("#" * 40)
+        print("\033[1;31m#\033[m" * 50)
+        print("\033[1;31mEntrada inválida, Digite novamente...\033[m")
+        print("\033[1;31m#\033[m" * 50)
 
 while True: 
     try: 
@@ -362,6 +365,6 @@ while True:
                     print("#" * 40)
             break                 
     except ValueError:
-        print("#" * 50)
-        print("Entrada inválida, Digite novamente...")
-        print("#" * 50)
+        print("\033[1;31m#\033[m" * 50)
+        print("\033[1;31mEntrada inválida, Digite novamente...\033[m")
+        print("\033[1;31m#\033[m" * 50)
