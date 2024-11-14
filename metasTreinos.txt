@@ -33,3 +33,6 @@ Sua meta é correr 2.0 em 2.0 DIAS
 ----------- A longo Prazo ------------
 Sua meta é correr 1.0 em 1.0 DIAS
 
+---------------- Por treino -----------------
+Sua meta é correr 5.0 km em 120.0 MINUTOS
+

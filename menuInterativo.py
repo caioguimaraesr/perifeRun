@@ -94,6 +94,7 @@ def visualizarTreinos():
                 for i, linha in enumerate(linhas):
                     if tempo in linha:
                         treinoEncontrado = True
+                        print("-" * 20)
                         print(linhas[i-3].strip()) # nome do treino
                         print(linhas[i-2].strip())  # data
                         print(linhas[i-1].strip()) # distância percorrida
