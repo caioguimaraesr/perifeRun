@@ -67,14 +67,12 @@ AO SER SOLICITADO O MENU INTERATIVO PELO USUÁRIO, VOCÊ PODERÁ SELECIONAR AS P
 APÓS O ENCERRAMENTO, VOCÊ TERÁ ACESSO AS DEMAIS FUNCIONALIDADES...
 ``` py 
 1 - ADICIONAR METAS
-    1.2 - VER METAS
-2 -  SUGESTÃO DE TREINOS
-3 - FEEDBACK
-4 - ENCERRAR
+2 - VER METAS
+3 -  SUGESTÃO DE TREINOS
+4 - FEEDBACK
+5 - ENCERRAR
 ```
 
 ### Se eu digitar um valor errado?
 - O sistema reconhecerá o erro e informará para o usuário.
 - Após ser informado, o sistema enviará novamente a pergunta até que deseja respondido como o esperado. 
-
-###

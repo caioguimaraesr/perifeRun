@@ -3,17 +3,5 @@
 
 Corrida: Corrida Na Jaqueira
 Nota: 5
-Comentário: me senti muito bem na corrida, alonguei bastante e gostei do resultado
----------------------------------------------
-Corrida: Corrida Na Boa Vista
-Nota: 5
-Comentário: corrida muito boa, gostei bastante de correr lá
----------------------------------------------
-Corrida: Corrida Na Jaqueira
-Nota: 4
-Comentário: foi do caramaba 
----------------------------------------------
-Corrida: Corrida No Jardim
-Nota: 5
-Comentário: foi top
+Comentário: foi muito top, bastante produtivo, aprendi muito com os profissionais presentes no local e que me fizeram evoluir no mundo das corridas.
 ---------------------------------------------

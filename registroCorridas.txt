@@ -1,46 +1,12 @@
 Gerenciador de Treinos de Corrida
 **********************************
 
-
-
-Nome do treino: Corrida Na Boa Vista
-Data: 8/12/2022
+Nome do treino: Corrida No Buraco Da Veia
+Data: 16/11/2024
 Distância Percorrida: 5 km
-Tempo: 0 hora(s) 45 minuto(s) 52 segundo(s)
-Localização: Rua Marquês do Pombal, 45
-Condições Climáticas: Ensolarado
+Tempo: 0 hora(s) 28 minuto(s) 25 segundo(s)
+Localização: Buraco Da Veia, Recife/Pernambuco
+Condições Climáticas: Chovendo
 
 
-Nome do treino: corrida no bosque
-Data: 8/2/2012
-Distância Percorrida: 10 km
-Tempo: 0 hora(s) 53 minuto(s) 12 segundo(s)
-Localização: Recife,pe
-Condições Climáticas: Nublado
-
-
-
-
-Nome do treino: Corrida Na Via Mangue
-Data: 13/11/2024
-Distância Percorrida: 10 km
-Tempo: 0 hora(s) 45 minuto(s) 12 segundo(s)
-Localização: Recife
-Condições Climáticas: Ensolarado
-
-
-Nome do treino: Corrida No Coque
-Data: 4/4/2023
-Distância Percorrida: 10 km
-Tempo: 0 hora(s) 56 minuto(s) 45 segundo(s)
-Localização: Recife
-Condições Climáticas: Nublado
-
-
-Nome do treino: Corrida No Jardim
-Data: 4/4/2023
-Distância Percorrida: 10 km
-Tempo: 0 hora(s) 36 minuto(s) 24 segundo(s)
-Localização: Recife
-Condições Climáticas: Nublado
 

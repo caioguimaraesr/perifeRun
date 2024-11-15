@@ -250,8 +250,8 @@ def sugestTreinos():
 
             numeroAleatorios = random.randint(0, 39)
 
-            print("\n                 =-=-=-= SUGESTÃO DE TREINO =-=-=-=")
-            print(treinos[numeroAleatorios] + "\n")
+            print("\n\033[1;34m                 =-=-=-= SUGESTÃO DE TREINO =-=-=-=\033[m")
+            print(f"\033[1;37m{treinos[numeroAleatorios]}\033[m" + "\n")
 
     except ValueError:
         print("\033[1;31m#\033[m" * 50)
