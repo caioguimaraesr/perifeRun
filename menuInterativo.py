@@ -35,7 +35,7 @@ def adicionarTreinos():
             else: 
                 print("Entrada inválida, Digite novamente...")
 
-        localizacao = f"{input("Localização: ").capitalize().strip()}"
+        localizacao = f"{input("Localização: ").title().strip()}"
 
         while True: 
             condClima = f"{(input("Condições Climáticas: ").title().strip())}"
@@ -145,7 +145,7 @@ def atualizarTreinos():
                     novaLoc = f"{input("Localização: ").title()}"
                     linhas[i+4] = f"Localização: {novaLoc}\n"
                 elif o == 6:
-                    print("Nova Condição Climática: ")
+                    print("Nova Condição Climática: ").title()
                     novaCondClim = f"{input("Condições Climáticas: ")}"
                     linhas[i+5] = f"Condições Climáticas: {novaCondClim}\n\n"
 
