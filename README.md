@@ -6,7 +6,6 @@
 ## FUNCIONALIDADES
 No PerifeRun, você pode usufruir das diversas funcionalidades presentes no menu interativo...
 
-### Principais Funcionalidades
 <table>
   <tr>
     <th>Funcionalidades</th>
