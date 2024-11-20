@@ -7,7 +7,7 @@ def adicionarTreinos():
     try:
         while True: 
             nome = input("Nome do treino: ").strip().title()
-            if nome.replace(" ", "").isalnum():
+            if nome.replace(" ", "").isalnum(): 
                 break
             else:
                 print("Nome inválido, digite novamente!")
