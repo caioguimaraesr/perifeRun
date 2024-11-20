@@ -196,7 +196,7 @@ def removerTreinos():
         print("\033[1;31mEntrada inválida, Digite novamente...\033[m")
         print("\033[1;31m#\033[m" * 50)
 
-#Funcionalidade de adicionar metas nos seus treinos
+#Funcionalidade de adicionar metas nos seus treinos!
 def AmetasTreinos():
     try: 
         print("        ADICIONAR METAS         ")
@@ -219,7 +219,7 @@ def AmetasTreinos():
         print("\033[1;31m#\033[m" * 50)
         print("\033[1;31mEntrada inválida, Digite novamente...\033[m")
         print("\033[1;31m#\033[m" * 50)
-        
+#funcionalidade de configuraçao de metas no treino!      
 def VmetasTreinos():
     try:
         while True: 
@@ -246,7 +246,7 @@ def VmetasTreinos():
         print("\033[1;31m#\033[m" * 50)
         print("\033[1;31mEntrada inválida, Digite novamente...\033[m")
         print("\033[1;31m#\033[m" * 50)
-        
+#funcionalidade de sugerir treinos aleatorios para o usuario!        
 def sugestTreinos(): 
     try: 
         with open("treinosAleatorios.txt", "r", encoding="utf8") as arquivo:
@@ -261,7 +261,7 @@ def sugestTreinos():
         print("\033[1;31m#\033[m" * 50)
         print("\033[1;31mEntrada inválida, Digite novamente...\033[m")
         print("\033[1;31m#\033[m" * 50)
-
+#funcionalidade de avaliar corridas ja feitas!
 def avaliacaoCorridas():
     try:
         while True: 
@@ -336,6 +336,7 @@ while True:
  
 #menu secundario
 while True: 
+    #inicio dos loops
     try: 
         looping = input(f"{nome}, deseja acessar as funcionalidades extras? ").lower()
         print("-" * 50)
