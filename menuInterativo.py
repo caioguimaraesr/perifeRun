@@ -3,6 +3,7 @@ os.system("cls")
 
 import random
 
+#Funcionalidade de adicionar treinos
 def adicionarTreinos():
     try:
         while True: 
@@ -52,6 +53,7 @@ def adicionarTreinos():
         print("\033[1;31mEntrada inválida, Digite novamente...\033[m")
         print("\033[1;31m#\033[m" * 50)
 
+#Funcionalidade de visualização de treinos!
 def visualizarTreinos():
     try: 
         while True: 
@@ -182,10 +184,10 @@ def removerTreinos():
             registroCorridas.writelines(listaRestante)
 
         if treinoEncontrado:
-            print("\033[1;32mTreino removido com sucesso!\033[m")
+            print("\033[1;32mTreino removido com sucesso...\033[m")
             print()
         else: 
-            print("\033[1;31mTreino não encontrado com esse nome.\033[m")
+            print("\033[1;31mTreino não encontrado com esse nome...\033[m")
             print()
     except ValueError:
         print("\033[1;31m#\033[m" * 50)
@@ -271,13 +273,13 @@ def avaliacaoCorridas():
             if avaliacaoTreino: 
                 break 
             else: 
-                print("\033[1;31mTreino não encontrado, Digite novamente!!!\033[m")
+                print("\033[1;31mTreino não encontrado, Digite novamente...\033[m")
         
         coment = input("Insira um comentário para essa corrida: ")
         while True:
             feed = int(input("Insira uma nota de \033[1;31m0\033[m a \033[1;32m5\033[m para essa corrida: "))        
             if 0 < feed > 5:
-                print("Avaliação Inválida, Digite novamente!!")
+                print("Avaliação Inválida, Digite novamente...")
             else:
                 break
 
@@ -304,7 +306,8 @@ while True:
         print("\033[1;31mEntrada inválida, Digite novamente...\033[m")
         print("\033[1;31m#\033[m" * 50)
 print(f"\n\033[1;35m-=-=-=-=-=-=-=-=-= Bem vindo ao PERIFERUN, \033[1;32m{nome}\033[m \033[1;35m-=-=-=-=-=-=-=-=-=\033[m")
-
+ 
+#menu principal 
 while True:
     try: 
         print("\033[1;32m[1] Adicionar Treinos\033[m \n\033[1;33m[2] Visualizar Treinos\033[m \n\033[1;33m[3] Atualizar Treinos\033[m \n\033[1;31m[4] Excluir Treino \n\033[1;31m[5] Encerrar\033[m")
@@ -327,7 +330,8 @@ while True:
         print("\033[1;31m#\033[m" * 50)
         print("\033[1;31mEntrada inválida, Digite novamente...\033[m")
         print("\033[1;31m#\033[m" * 50)
-
+ 
+#menu secundario
 while True: 
     try: 
         looping = input(f"{nome}, deseja acessar as funcionalidades extras? ").lower()
