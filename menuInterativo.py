@@ -144,12 +144,11 @@ def atualizarTreinos():
                     novoTempo = f"{int(input("- Hora(s): "))} hora(s) {int(input("- Minuto(s): "))} minuto(s) {int(input("- Segundo(s): "))} segundo(s)"
                     linhas[i+3] = f"Tempo: {novoTempo}\n"
                 elif o == 5: 
-                    print("Nova Localização: ")
-                    novaLoc = f"{input("Localização: ").title()}"
+                    novaLoc = f"{input("Nova localização: ").title()}"
                     linhas[i+4] = f"Localização: {novaLoc}\n"
                 elif o == 6:
-                    print("Nova Condição Climática: ").title()
-                    novaCondClim = f"{input("Condições Climáticas: ")}"
+                  
+                    novaCondClim = f"{input("Nova Condição Climática: ").title()}"
                     linhas[i+5] = f"Condições Climáticas: {novaCondClim}\n\n"
 
         if not treinoEncontrado:
