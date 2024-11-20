@@ -345,20 +345,21 @@ while True:
                     print("Oque deseja fazer? \n\033[1;32m[1] Adicionar Meta\033[m \n\033[1;33m[2] Ver Metas\033[m \n\033[1;34m[3] Sugestão de Treino\033[m \033\n[1;35m[4] Feedbacks\033[m \n\033[1;31m[5] Encerrar\033[m")
                     opcao = int(input("Oque deseja fazer? "))
                     print("-" * 35)
-                    if opcao == 1:
-                        AmetasTreinos()
-                    elif opcao == 2:
-                        VmetasTreinos()
-                    elif opcao == 3:
-                        sugestTreinos()
-                    elif opcao == 4:
-                        avaliacaoCorridas()
-                    elif opcao == 5:
-                        print("Encerrando interação...")
-                        print(f"Até mais, {nome}!!")
-                        break 
-                    else:
-                        print("Opção inválida, Digite novamente...")
+                    match opcao:
+                        case 1:
+                            AmetasTreinos()
+                        case 2:
+                            VmetasTreinos()
+                        case 3:
+                            sugestTreinos()
+                        case 4:
+                            avaliacaoCorridas()
+                        case 5:
+                            print("Encerrando interação...")
+                            print(f"Até mais, {nome}!!")
+                            break
+                        case _:
+                            print("Opção inválida. Digite novamente...")
                 except ValueError:
                     print("#" * 40)
                     print("Entrada inválida, Digite novamente...")
