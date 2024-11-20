@@ -127,7 +127,7 @@ def atualizarTreinos():
             if nome in linhas[i]:
                 treinoEncontrado = True
                 print("[1- Nome do treino]\n[2- Data do Treino]\n[3- Distância Percorrida]\n[4- Tempo do treino]\n[5- Localização]\n[6- Condições climáticas]")
-                o = int(input("Oque deseja modificar? "))
+                o = int(input("O que deseja modificar? ")) # variável de opção de entrada do usuário
                 if o == 1:
                     novoNome = input("Digite o novo nome: ").title()
                     linhas[i] = f"Nome do treino: {novoNome}\n"
@@ -314,7 +314,7 @@ print(f"\n\033[1;35m-=-=-=-=-=-=-=-=-= Bem vindo ao PERIFERUN, \033[1;32m{nome}\
 while True:
     try: 
         print("\033[1;32m[1] Adicionar Treinos\033[m \n\033[1;33m[2] Visualizar Treinos\033[m \n\033[1;33m[3] Atualizar Treinos\033[m \n\033[1;31m[4] Excluir Treino \n\033[1;31m[5] Encerrar\033[m")
-        o = int(input("O que deseja fazer?: "))
+        o = int(input("O que deseja fazer?: ")) # variável de opção de entrada do usuário
         print("*" * 50)
         if o == 5:
             break 
