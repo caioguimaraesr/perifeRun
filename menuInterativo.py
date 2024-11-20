@@ -115,6 +115,7 @@ def visualizarTreinos():
         print("\033[1;31mEntrada inválida, Digite novamente...\033[m")
         print("\033[1;31m#\033[m" * 50)
 
+#Funcionalidade de atualizar e mudar seus treinos dentro do codigo!
 def atualizarTreinos(): 
     try: 
         treinoEncontrado = False
@@ -162,6 +163,7 @@ def atualizarTreinos():
         print("\033[1;31mEntrada inválida, Digite novamente...\033[m")
         print("\033[1;31m#\033[m" * 50)
 
+#Funcionalidade de remover treinos que o usuario nao precisa mais!
 def removerTreinos():
     try: 
         listaRestante = []
@@ -194,6 +196,7 @@ def removerTreinos():
         print("\033[1;31mEntrada inválida, Digite novamente...\033[m")
         print("\033[1;31m#\033[m" * 50)
 
+#Funcionalidade de adicionar metas nos seus treinos
 def AmetasTreinos():
     try: 
         print("        ADICIONAR METAS         ")
