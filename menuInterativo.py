@@ -3,14 +3,15 @@ os.system("cls")
 
 import random
 
+#Funcionalidade de adicionar treinos.
 def adicionarTreinos():
     try:
-        while True:
+        while True: 
             nome = input("Nome do treino: ").strip().title()
             if nome.replace(" ", "").isalnum():
                 break
             else:
-                print("Nome inválido, digite novamente!")
+                print("Nome inválido, Digite novamente...")
 
         while True: 
             print(f"Data do treino: ")
@@ -21,7 +22,7 @@ def adicionarTreinos():
             if 1<= dia <= 31 and 1 <= mes <= 12 and ano > 0:
                 break 
             else:
-                print("Entrada inválida, digite novamente")
+                print("Entrada inválida, Digite novamente...")
         
         distanciaPercorrida = f"{int(input("Distância Percorrida (Km): "))} km"
 
@@ -52,6 +53,7 @@ def adicionarTreinos():
         print("\033[1;31mEntrada inválida, Digite novamente...\033[m")
         print("\033[1;31m#\033[m" * 50)
 
+# Funcionalidade de visualização de treinos!
 def visualizarTreinos():
     try: 
         while True: 
@@ -68,16 +70,16 @@ def visualizarTreinos():
                     if distanciaPercorrida in linha:
                         treinoEncontrado = True
                         print("-" * 20)
-                        print(linhas[i-2].strip()) # nome do treino 
-                        print(linhas[i-1].strip())  # data
-                        print(linha.strip()) # distância percorrida
-                        print(linhas[i+1].strip()) # tempo
-                        print(linhas[i+2].strip()) # localização 
-                        print(linhas[i+3].strip()) # condições climáticas
+                        print(linhas[i-2].strip()) # Nome do treino. 
+                        print(linhas[i-1].strip())  # Data.
+                        print(linha.strip()) # Distância percorrida.
+                        print(linhas[i+1].strip()) # Tempo.
+                        print(linhas[i+2].strip()) # Localização. 
+                        print(linhas[i+3].strip()) # Condições climáticas.
                         print("-" * 20)
                 
                 if not treinoEncontrado:
-                    print("Treino não encontrado!")
+                    print("Treino não encontrado...")
 
             elif o == 2:
                 print("Tempo de Treino:")
@@ -90,16 +92,16 @@ def visualizarTreinos():
                     if tempo in linha:
                         treinoEncontrado = True
                         print("-" * 20)
-                        print(linhas[i-3].strip()) # nome do treino
-                        print(linhas[i-2].strip())  # data
-                        print(linhas[i-1].strip()) # distância percorrida
-                        print(linha.strip()) # tempo
-                        print(linhas[i+1].strip()) # localização 
-                        print(linhas[i+2].strip()) # condições climáticas
+                        print(linhas[i-3].strip()) # Nome do treino.
+                        print(linhas[i-2].strip())  # Data.
+                        print(linhas[i-1].strip()) # Distância percorrida.
+                        print(linha.strip()) # Tempo.
+                        print(linhas[i+1].strip()) # Localização.
+                        print(linhas[i+2].strip()) # Condições climáticas.
                         print("-" * 20)
 
                 if not treinoEncontrado: 
-                    print("Treino não encontrado!")
+                    print("Treino não encontrado...")
                 print()
 
             elif o == 3:
@@ -113,6 +115,7 @@ def visualizarTreinos():
         print("\033[1;31mEntrada inválida, Digite novamente...\033[m")
         print("\033[1;31m#\033[m" * 50)
 
+# Funcionalidade de atualizar e mudar seus treinos dentro do codigo!
 def atualizarTreinos(): 
     try: 
         treinoEncontrado = False
@@ -141,7 +144,6 @@ def atualizarTreinos():
                     novoTempo = f"{int(input("- Hora(s): "))} hora(s) {int(input("- Minuto(s): "))} minuto(s) {int(input("- Segundo(s): "))} segundo(s)"
                     linhas[i+3] = f"Tempo: {novoTempo}\n"
                 elif o == 5: 
-                    print("Nova Localização: ")
                     novaLoc = f"{input("Localização: ").title()}"
                     linhas[i+4] = f"Localização: {novaLoc}\n"
                 elif o == 6:
@@ -150,7 +152,7 @@ def atualizarTreinos():
                     linhas[i+5] = f"Condições Climáticas: {novaCondClim}\n\n"
 
         if not treinoEncontrado:
-            print("\033[1;31mTreino não encontrado\033[m")
+            print("\033[1;31mTreino não encontrado...\033[m")
             print()
 
         with open("registroCorridas.txt", "w", encoding="utf8") as registroCorridas: 
@@ -161,6 +163,7 @@ def atualizarTreinos():
         print("\033[1;31mEntrada inválida, Digite novamente...\033[m")
         print("\033[1;31m#\033[m" * 50)
 
+# Funcionalidade de remover treinos que o usuario nao precisa mais...
 def removerTreinos():
     try: 
         listaRestante = []
@@ -173,26 +176,27 @@ def removerTreinos():
         i = 0
         while i < len(linhas):
             if nome in linhas[i]:
-                treinoEncontrado = True  # apneas para dar o feedback para usuário 
-                i += 6  # vai ignorar as próximas 6 linhas pra pular o bloco do treino todo
+                treinoEncontrado = True  # Apenas para dar o feedback para usuário. 
+                i += 6  # Vai ignorar as próximas 6 linhas pra pular o bloco do treino todo.
             else:
-                listaRestante.append(linhas[i])  # aqui vai adicionar a uma lista o restante da lista que não entrou no parametro de cima
-                i += 1  # é o incremento para poder acabar o looping
+                listaRestante.append(linhas[i])  # Aqui vai adicionar a uma lista o restante da lista que não entrou no parametro de cima.
+                i += 1  # É o incremento para poder acabar o looping.
 
         with open("registroCorridas.txt", "w", encoding="utf8") as registroCorridas:
             registroCorridas.writelines(listaRestante)
 
         if treinoEncontrado:
-            print("\033[1;32mTreino removido com sucesso!\033[m")
+            print("\033[1;32mTreino removido com sucesso...\033[m")
             print()
         else: 
-            print("\033[1;31mTreino não encontrado com esse nome.\033[m")
+            print("\033[1;31mTreino não encontrado com esse nome...\033[m")
             print()
     except ValueError:
         print("\033[1;31m#\033[m" * 50)
         print("\033[1;31mEntrada inválida, Digite novamente...\033[m")
         print("\033[1;31m#\033[m" * 50)
 
+# Funcionalidade de adicionar metas nos seus treinos!
 def AmetasTreinos():
     try: 
         print("        ADICIONAR METAS         ")
@@ -215,7 +219,7 @@ def AmetasTreinos():
         print("\033[1;31m#\033[m" * 50)
         print("\033[1;31mEntrada inválida, Digite novamente...\033[m")
         print("\033[1;31m#\033[m" * 50)
-        
+# Funcionalidade de configuraçao de metas no treino!      
 def VmetasTreinos():
     try:
         while True: 
@@ -242,7 +246,7 @@ def VmetasTreinos():
         print("\033[1;31m#\033[m" * 50)
         print("\033[1;31mEntrada inválida, Digite novamente...\033[m")
         print("\033[1;31m#\033[m" * 50)
-        
+# Funcionalidade de sugerir treinos aleatorios para o usuario!        
 def sugestTreinos(): 
     try: 
         with open("treinosAleatorios.txt", "r", encoding="utf8") as arquivo:
@@ -257,7 +261,7 @@ def sugestTreinos():
         print("\033[1;31m#\033[m" * 50)
         print("\033[1;31mEntrada inválida, Digite novamente...\033[m")
         print("\033[1;31m#\033[m" * 50)
-
+# Funcionalidade de avaliar corridas ja feitas!
 def avaliacaoCorridas():
     try:
         while True: 
@@ -272,13 +276,13 @@ def avaliacaoCorridas():
             if avaliacaoTreino: 
                 break 
             else: 
-                print("\033[1;31mTreino não encontrado, Digite novamente!!!\033[m")
+                print("\033[1;31mTreino não encontrado, Digite novamente...\033[m")
         
         coment = input("Insira um comentário para essa corrida: ")
         while True:
             feed = int(input("Insira uma nota de \033[1;31m0\033[m a \033[1;32m5\033[m para essa corrida: "))        
             if 0 < feed > 5:
-                print("Avaliação Inválida, Digite novamente!!")
+                print("Avaliação Inválida, Digite novamente...")
             else:
                 break
 
@@ -295,17 +299,18 @@ print("\033[1;33m          GERENCIAMENTO DOS TREINOS DE CORRIDA          \033[m"
 print("\033[1;33m-=\033[m" * 30)
 while True:
     try: 
-        nome = input("\nDigite o seu nome: ").strip().title() #strip - retira os espaços vazios da frente e de tras   
-        if nome.replace(" ", "").isalpha(): # eu vou retirar os espaços vazios para conferir se tem apenas letras no input
-            break # caso tenha apenas letras no input, iremos quebrar o looping 
+        nome = input("\nDigite o seu nome: ").strip().title() # Strip - Retira os espaços vazios da frente e de tras   
+        if nome.replace(" ", "").isalpha(): # Eu vou retirar os espaços vazios para conferir se tem apenas letras no input
+            break # Caso tenha apenas letras no input, iremos quebrar o looping 
         else:
-            print("\033[1;31mNome inválido, Digite novamente...\033[m") # caso não consiga seguir as condições acima, printará esse comando e entrará no looping novamente
+            print("\033[1;31mNome inválido, Digite novamente...\033[m") # Caso não consiga seguir as condições acima, printará esse comando e entrará no looping novamente
     except ValueError:
         print("\033[1;31m#\033[m" * 50)
         print("\033[1;31mEntrada inválida, Digite novamente...\033[m")
         print("\033[1;31m#\033[m" * 50)
 print(f"\n\033[1;35m-=-=-=-=-=-=-=-=-= Bem vindo ao PERIFERUN, \033[1;32m{nome}\033[m \033[1;35m-=-=-=-=-=-=-=-=-=\033[m")
-
+ 
+# Menu principal 
 while True:
     try: 
         print("\033[1;32m[1] Adicionar Treinos\033[m \n\033[1;33m[2] Visualizar Treinos\033[m \n\033[1;33m[3] Atualizar Treinos\033[m \n\033[1;31m[4] Excluir Treino \n\033[1;31m[5] Encerrar\033[m")
@@ -328,8 +333,10 @@ while True:
         print("\033[1;31m#\033[m" * 50)
         print("\033[1;31mEntrada inválida, Digite novamente...\033[m")
         print("\033[1;31m#\033[m" * 50)
-
+ 
+# Menu secundario
 while True: 
+    # Inicio dos loops
     try: 
         looping = input(f"{nome}, deseja acessar as funcionalidades extras? ").lower()
         print("-" * 50)
