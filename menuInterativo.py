@@ -147,6 +147,7 @@ def atualizarTreinos():
                     novaLoc = f"{input("Nova localização: ").title()}"
                     linhas[i+4] = f"Localização: {novaLoc}\n"
                 elif o == 6:
+
                     novaCondClim = f"{input("Nova Condição Climática: ").title()}"
                     linhas[i+5] = f"Condições Climáticas: {novaCondClim}\n\n"
 
@@ -292,8 +293,6 @@ def avaliacaoCorridas():
         print("\033[1;31mEntrada inválida, Digite novamente...\033[m")
         print("\033[1;31m#\033[m" * 50)
 
-print("\033[1;33m          GERENCIAMENTO DOS TREINOS DE CORRIDA          \033[m")
-print("\033[1;33m-=\033[m" * 30)
 while True:
     try: 
         nome = input("\nDigite o seu nome: ").strip().title() #strip - retira os espaços vazios da frente e de tras   
@@ -305,7 +304,10 @@ while True:
         print("\033[1;31m#\033[m" * 50)
         print("\033[1;31mEntrada inválida, Digite novamente...\033[m")
         print("\033[1;31m#\033[m" * 50)
-print(f"\n\033[1;35m-=-=-=-=-=-=-=-=-= Bem vindo ao PERIFERUN, \033[1;32m{nome}\033[m \033[1;35m-=-=-=-=-=-=-=-=-=\033[m")
+        
+print("\033[1;33m          GERENCIAMENTO DOS TREINOS DE CORRIDA          \033[m")
+print("\033[1;33m-=\033[m" * 30)
+print(f"\n\033[1;37mOlá\033[m \033[1;33m{nome},\033[m \n\033[1;37mSeja bem-vindo ao PerifeRun 🏃\033[m\n")
 
 while True:
     try: 
