@@ -1,7 +1,10 @@
 import os 
-os.system("cls")
+
 
 import random
+
+def clear_screen():
+    os.system("cls")
 
 def adicionarTreinos():
     try:
