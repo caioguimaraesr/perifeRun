@@ -1,10 +1,12 @@
 METAS DEFINIDAS
 ****************************
 
+---------------- Por treino -----------------
+Sua meta é correr 10.0 km em 120.0 MINUTOS
 
 ---------------- Por treino -----------------
-Sua meta é correr 21.0 km em 120.0 MINUTOS
+Sua meta é correr 10.0 km em 100.0 MINUTOS
 
 ----------- A longo Prazo ------------
-Sua meta é correr 190.0 em 30.0 DIAS
+Sua meta é correr 90.0 em 3.0 DIAS
 
