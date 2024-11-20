@@ -147,7 +147,6 @@ def atualizarTreinos():
                     novaLoc = f"{input("Nova localização: ").title()}"
                     linhas[i+4] = f"Localização: {novaLoc}\n"
                 elif o == 6:
-                  
                     novaCondClim = f"{input("Nova Condição Climática: ").title()}"
                     linhas[i+5] = f"Condições Climáticas: {novaCondClim}\n\n"
 
