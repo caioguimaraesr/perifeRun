@@ -311,19 +311,19 @@ while True:
         print("\033[1;32m[1] Adicionar Treinos\033[m \n\033[1;33m[2] Visualizar Treinos\033[m \n\033[1;33m[3] Atualizar Treinos\033[m \n\033[1;31m[4] Excluir Treino \n\033[1;31m[5] Encerrar\033[m")
         o = int(input("O que deseja fazer?: "))
         print("*" * 50)
-        if o == 5:
-            break 
-
-        if o == 1:
-            adicionarTreinos()
-        elif o == 2: 
-            visualizarTreinos()
-        elif o == 3:
-            atualizarTreinos()
-        elif o == 4: 
-            removerTreinos()
-        elif o > 5:
-            print("Opção inválida, Digite novamente...")
+        match o:
+            case 5:
+                break
+            case 1:
+                adicionarTreinos()
+            case 2:
+                visualizarTreinos()
+            case 3:
+                atualizarTreinos()
+            case 4:
+                removerTreinos()
+            case _:
+                print("\033[1;31mOpção inválida, Digite novamente...\033[m")
     except ValueError:
         print("\033[1;31m#\033[m" * 50)
         print("\033[1;31mEntrada inválida, Digite novamente...\033[m")
