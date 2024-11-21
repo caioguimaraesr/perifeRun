@@ -327,7 +327,7 @@ while True:
             atualizarTreinos()
         elif o == 4: 
             removerTreinos()
-        elif o > 5:
+        elif o >= 5:
             print("Opção inválida, Digite novamente...")
     except ValueError:
         print("\033[1;31m#\033[m" * 50)
