@@ -170,11 +170,11 @@ def removerTreinos():
         i = 0
         while i < len(linhas):
             if nome in linhas[i]:
-                treinoEncontrado = True  # apneas para dar o feedback para usuário 
-                i += 6  # vai ignorar as próximas 6 linhas pra pular o bloco do treino todo
+                treinoEncontrado = True   
+                i += 6  
             else:
-                listaRestante.append(linhas[i])  # aqui vai adicionar a uma lista o restante da lista que não entrou no parametro de cima
-                i += 1  # é o incremento para poder acabar o looping
+                listaRestante.append(linhas[i]) 
+                i += 1 
 
         with open("registroCorridas.txt", "w", encoding="utf8") as registroCorridas:
             registroCorridas.writelines(listaRestante)
@@ -291,11 +291,11 @@ def avaliacaoCorridas():
 
 while True:
     try: 
-        nome = input("\n\033[1;37mDigite o seu nome: \033[m").strip().title() #strip - retira os espaços vazios da frente e de tras   
-        if nome.replace(" ", "").isalpha(): # eu vou retirar os espaços vazios para conferir se tem apenas letras no input
-            break # caso tenha apenas letras no input, iremos quebrar o looping 
+        nome = input("\n\033[1;37mDigite o seu nome: \033[m").strip().title()   
+        if nome.replace(" ", "").isalpha(): 
+            break 
         else:
-            print("\033[1;31mNome inválido, Digite novamente...\033[m") # caso não consiga seguir as condições acima, printará esse comando e entrará no looping novamente
+            print("\033[1;31mNome inválido, Digite novamente...\033[m") 
     except ValueError:
         print("\033[1;31m#\033[m" * 50)
         print("\033[1;31mEntrada inválida, Digite novamente...\033[m")
