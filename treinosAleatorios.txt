@@ -1,0 +1,40 @@
+Corrida Longa de Resistência - 10 km em ritmo moderado.
+Intervalado Curto - 10x (sprints de 200m com 1 minuto de descanso).
+Tempo Run - 5 km em ritmo de corrida (um pouco mais intenso que o normal).
+Corrida Leve de Recuperação - 30 minutos em ritmo confortável.
+Fartlek - 6 km alternando entre 1 minuto rápido e 2 minutos lento.
+Corrida de Ladeira - 8 repetições de subida em ladeira (150-200m) com descanso na descida.
+Corrida Progressiva - 6 km, aumentando o ritmo a cada quilômetro.
+Corrida Tempo Rápida - 3 km em ritmo intenso, como preparação para uma prova curta.
+Longão de Domingo - 12 km em ritmo leve, ideal para aumentar a resistência.
+Intervalado Médio - 6x (sprints de 400m com 90 segundos de descanso).
+Circuito HIIT - 10x (100m de sprint + 100m de caminhada).
+Treino de Inclinação - Esteira em inclinação alta (8-10%) por 20 minutos.
+Treino de Velocidade - 5x (800m rápido com 2 minutos de descanso).
+Corrida Moderada - 8 km em um ritmo médio, mantendo a intensidade.
+Sprints em Pirâmide - 100m, 200m, 400m, 200m, 100m, com descanso de 1 minuto entre cada.
+Corrida Intervalada Longa - 3x (1 km rápido com 2 minutos de descanso).
+Treino em Circuito - 3x (500m de corrida + 20 agachamentos).
+Corrida de Resistência em Alta Velocidade - 4 km em ritmo intenso.
+Treino de Colina Prolongada - 3x (3 minutos de subida, descendo na caminhada).
+Corrida Contínua de 5 km - Treino constante em ritmo confortável para recuperação.
+Corrida de Ritmo Progressivo Curto - 3 km, aumentando a velocidade a cada 500 metros.
+Intervalado Longo - 4x (1.5 km rápido com 3 minutos de descanso).
+Fartlek Longo - 10 km alternando entre 2 minutos rápidos e 3 minutos lentos.
+Corrida de Colina Rápida - 6x subidas de 100 metros em ritmo de sprint com descanso na descida.
+Corrida em Terreno Variado - 5 km em trilhas ou areia para fortalecer músculos estabilizadores.
+Corrida com Inclinação Moderada - 5 km em esteira com inclinação de 5%, simulando leve subida.
+Treino de Aceleração Gradual - 4 km, aumentando a velocidade a cada 200 metros.
+Corrida de Resiliência - 15 km em ritmo muito leve, focando na distância e no controle da respiração.
+Corrida em Circuito Urbano - 8 km alternando entre correr em subidas, descidas e planos.
+Sprints Repetidos - 12x (100 metros de sprint com 1 minuto de descanso).
+Intervalado em Pirâmide Invertida - 1 km, 800m, 600m, 400m, 200m com descanso decrescente (2 min, 90s, 60s, 30s).
+Corrida com Técnica de Braços - 3 km focando na técnica de movimentação dos braços para melhorar eficiência.
+Treino de Endurance com Sprints - 5 km de corrida leve + 5x sprints de 100 metros.
+Corrida Estabilizadora - 6 km em um ritmo estável e constante, sem aumentar nem diminuir o ritmo.
+Corrida em Zig-Zag - 5 km alternando direções (ótimo para melhor controle e estabilidade).
+Corrida em Circuito Funcional - 4x (400 metros de corrida + 15 burpees).
+Corrida de Velocidade Negativa - 5 km começando devagar e terminando no ritmo mais rápido possível.
+Fartlek de Ladeira - 4 km, correndo subidas rápido e descidas em ritmo lento.
+Treino de Resistência com Peso - Corrida de 5 km com colete de peso leve para fortalecimento.
+Treino de Respiração Controlada - 5 km focando na respiração nasal e no ritmo constante.

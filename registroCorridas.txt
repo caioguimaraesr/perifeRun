@@ -1,0 +1,13 @@
+Gerenciador de Treinos de Corrida
+**********************************
+
+Nome do treino: Corrida No Buraco Da Veia
+Data: 21/11/2024
+Distância Percorrida: 15 km
+Tempo: 0 hora(s) 55 minuto(s) 12 segundo(s)
+Localização: Recife/Pernambuco
+Condições Climáticas: Ensolarado
+
+
+
+

@@ -1,0 +1,10 @@
+      FEEDBACK CORRIDAS 
+********************************
+Corrida: Corrida No Buraco Da Veia
+Nota: 5
+Comentário: foi top
+---------------------------------------------
+Corrida: Corrida No Buraco Da Veia
+Nota: 4
+Comentário: foi massa demais, aprendi muito
+---------------------------------------------
